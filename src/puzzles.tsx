@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import { paths } from './paths';
 import { jsxPuzzle01_02 } from './puzzles/01.12';
 import { jsxPuzzle02_01, jsxPuzzle02_02 } from './puzzles/02.12';
+import { jsxPuzzle03_01, jsxPuzzle03_02 } from './puzzles/03.12';
 import { sortBy } from './utils/sort';
 
 type Puzzle = {
@@ -26,6 +27,16 @@ const puzzles: Puzzle[] = [
     day: 2,
     number: 2,
     render: () => jsxPuzzle02_02
+  },
+  {
+    day: 3,
+    number: 1,
+    render: () => jsxPuzzle03_01
+  },
+  {
+    day: 3,
+    number: 2,
+    render: () => jsxPuzzle03_02
   }
 ];
 

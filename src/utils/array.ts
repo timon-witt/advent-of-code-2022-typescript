@@ -37,8 +37,11 @@ export const sum = (array: number[]): number =>
  *
  * Inspired from: https://stackoverflow.com/a/47752730
  */
-export const groupBy = <T, K>(array: T[], f: (element: T) => K): Map<K, NonEmptyArray<T>> =>
-  array.reduce((result, element) => {
-    const key = f(element);
+export const groupBy = <T, K>(
+  array: T[],
+  f: (element: T, index: number) => K
+): Map<K, NonEmptyArray<T>> =>
+  array.reduce((result, element, index) => {
+    const key = f(element, index);
     return result.set(key, [...(result.get(key) || []), element]);
   }, new Map());
