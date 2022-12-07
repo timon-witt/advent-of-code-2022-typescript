@@ -7,6 +7,7 @@ import { jsxPuzzle03_01, jsxPuzzle03_02 } from './puzzles/03.12';
 import { jsxPuzzle04_01, jsxPuzzle04_02 } from './puzzles/04.12';
 import { puzzle05 } from './puzzles/05.12';
 import { puzzle06 } from './puzzles/06.12';
+import { puzzle07 } from './puzzles/07.12';
 import { sortBy } from './utils/sort';
 
 type Puzzle = {
@@ -70,6 +71,16 @@ const puzzles: Puzzle[] = [
     day: 6,
     number: 2,
     render: () => puzzle06().challenge2
+  },
+  {
+    day: 7,
+    number: 1,
+    render: () => puzzle07().challenge1
+  },
+  {
+    day: 7,
+    number: 2,
+    render: () => puzzle07().challenge2
   }
 ];
 
