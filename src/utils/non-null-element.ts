@@ -1,0 +1,1 @@
+export const nonNullElement = <T>(itm: T | null | undefined): itm is T => !!itm;
