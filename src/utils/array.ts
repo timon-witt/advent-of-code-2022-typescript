@@ -24,6 +24,15 @@ export function take<T>(inputArray: Array<T>, count: number, offset: number = 0)
   return inputArray.slice(offset, count + offset);
 }
 
+/**
+ * Returns an array's very last element.
+ * The return type is possibly undefined, except if the array is a NonEmptyArray.
+ */
+ export const last = <T extends unknown[]>(
+  array: T
+): T extends NonEmptyArray<infer E> ? E : T extends Array<infer E> ? E | undefined : never =>
+  array[array.length - 1] as any;
+
 export const sum = (array: number[]): number =>
   array.reduce<number>((result, curr) => result + curr, 0);
 

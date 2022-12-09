@@ -9,6 +9,7 @@ import { puzzle05 } from './puzzles/05.12';
 import { puzzle06 } from './puzzles/06.12';
 import { puzzle07 } from './puzzles/07.12';
 import { puzzle08 } from './puzzles/08.12';
+import { puzzle09 } from './puzzles/09.12';
 import { sortBy } from './utils/sort';
 
 type Puzzle = {
@@ -92,6 +93,16 @@ const puzzles: Puzzle[] = [
     day: 8,
     number: 2,
     render: () => puzzle08().challenge2
+  },
+  {
+    day: 9,
+    number: 1,
+    render: () => puzzle09().challenge1
+  },
+  {
+    day: 9,
+    number: 2,
+    render: () => puzzle09().challenge2
   }
 ];
 
